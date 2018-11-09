@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 5</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div style="background-color:red">Click me to get my bg color</div><br/>
+<div style="background-color:rgb(16,99,30);">Click me to get my bg color</div><br/>
+<div style="background-color:#523456">Click me to get my bg color</div><br/>
+<div style="background-color:#all">Click me to get my bg color</div><br/>
+<p id="allBGcolors"></p>
+
+<script>
+	$("document").ready( function(){
+			$("div").click( function(){
+				$(this).each( function(){
+					var txt = $(this).css("background-color") ;
+					$("#allBGcolors").text(txt );
+			});
+	});
+});
+</script>
+
+</body>
+</html>
+
